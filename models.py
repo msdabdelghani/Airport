@@ -11,7 +11,7 @@ class Airport(models.Model):
     def __str__(self):
         return f"{self.city} ( {self.code})"
 
-class Flights(models.Model):
+class Flight(models.Model):
     origin = models.ForeignKey(Airport, on_delete=CASCADE, related_name="departure")
     destination = models.ForeignKey(Airport, on_delete=CASCADE, related_name="arrival")
     duration = models.IntegerField()
