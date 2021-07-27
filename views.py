@@ -5,7 +5,7 @@ from .models import Flight
 
 def index(request):
     return render(request, "flights/index.html",{
-        "flights" : Flights.objects.all()
+        "flights" : Flight.objects.all()
     })
 
 def flight(request, flight_id):
